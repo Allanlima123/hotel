@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+.container-box{
+    background: var(--cor-gray);
+}
+
+.container-box .max-width{
+    background-image:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(../image/hotel-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 85vh;
+}
+
+.container-box .max-width .header{
+    max-width: 144rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 2%;
+}
+
+.container-box .max-width .header .box-icones{
+    padding:0 2rem;
+    padding-bottom: 1rem;
+}
+
+.container-box .max-width .header .box-icones i{
+    color: var(--cor-white);
+    margin-top: 1.5rem;
+    padding-right:1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.container-box .max-width .header .box-icones i:hover{
+    color: var(--cor-very-berry);
+}
+
+.container-box .max-width .header .navegation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cor-gray);
+    padding: 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.container-box .max-width .header .navegation::after{
+    position: absolute;
+    content:"hotel";
+    color: #fff;
+    text-align: center;
+    height: 1.5rem;
+    width: 10rem;
+    background: var(--cor-very-berry);
+    transform: rotate(-50deg);
+    left: -4rem;
+    top: 1rem;
+    padding-left: .5rem;
+}
+
+.container-box .max-width .header .navegation .Logo{
+    text-transform: uppercase;
+    color: var(--cor-gray-200);
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.container-box .max-width .header .navegation .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-box .max-width .header .navegation .navbar ul li{
+    margin-right:.5rem;
+}
+
+.container-box .max-width .header .navegation .navbar ul li a{
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    color: var(--cor-gray-200);
+    text-transform: uppercase;
+    transition: .2s ease-in-out;
+}
+
+.container-box .max-width .header .navegation .navbar ul li a.ativo{
+    background: var(--cor-very-berry);
+    color: var(--cor-white);
+}
+
+.container-box .description{
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 3.5rem 3%;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+}
+
+
+/*Rooms*/
+
+.container-rooms .box-rooms{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.container-rooms .box-rooms .luxury-room{
+    flex: 0 1 64rem;
+    height: 40rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.container-rooms .box-rooms .luxury-room img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-rooms .box-rooms .luxury-room .descricao-quarto,
+.container-rooms .box-rooms .morder-rooms .descricao-quarto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ccc;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: .5rem 1.5rem;
+}
+
+.container-rooms .box-rooms .luxury-room .descricao-quarto .texto h3,
+.container-rooms .box-rooms .morder-rooms .descricao-quarto .texto h3{
+    font-size: 1.5rem;
+    color: #444;
+}
+
+.container-rooms .box-rooms .luxury-room .descricao-quarto .texto p,
+.container-rooms .box-rooms .morder-rooms .descricao-quarto .texto p{
+    font-size: 1.2rem;
+    padding: .4rem 0;
+}
+
+.container-rooms .box-rooms .luxury-room .descricao-quarto .icone,
+.container-rooms .box-rooms .morder-rooms .descricao-quarto .icone{
+    background: var(--cor-very-berry);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 5rem;
+    width: 5rem;
+    text-align: center;
+    line-height: 6.2rem;
+}
+
+.container-rooms .box-rooms .luxury-room .descricao-quarto .icone i,
+.container-rooms .box-rooms .morder-rooms .descricao-quarto .icone i{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.container-rooms .box-rooms .morder-rooms{
+    flex: 0 1 42rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.container-rooms .box-rooms.box{
+    background: #f1f1f1;
+}
+
+.container-rooms .box-rooms .morder-rooms img{
+    width: 100%;
+}
+
+/*Services*/
+
+.Services .box-Services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+.Services .box-Services .atracoes{
+    flex: 1 1 25rem;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.Services .box-Services .atracoes .image{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 80%;
+}
+
+.Services .box-Services .atracoes .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Services .box-Services .atracoes h3{
+    padding-top: 1.2rem;
+    font-size: 1.7rem;
+    color: #222;
+}
+
+.Services .box-Services .atracoes p{
+    padding: 1.4rem;
+    font-size: 1.3rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+.Services .box-Services .atracoes .btn{
+    color: var(--cor-very-berry);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.Services .box-Services .atracoes .btn::after{
+    content: "";
+    display: block;
+    width: 10rem;
+    margin: 0 auto;
+    height: .2rem;
+    background: var(--cor-very-berry);
+}
+
+/*Special Offers*/
+
+.special-offers{
+    background: #f7f4f4;
+    padding: 3rem;
+    padding-bottom: 4rem;
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+.special-offers .container-offers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.special-offers .container-offers .offers{
+    background-color: #fff;
+    flex: 1 1 40rem;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+.special-offers .container-offers .offers img{
+    width: 100%;
+    object-fit: cover;
+    height: 22rem;
+    border-radius: .5rem;
+}
+
+.special-offers .container-offers .offers .text h3{
+    font-size: 2rem;
+    padding: 1.7rem 0 1rem 0;
+    color: #444;
+}
+
+.special-offers .container-offers .offers .text p{
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+
+/* Reviews */
+
+.Reviews .conatiner-reviews{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+.Reviews .conatiner-reviews .box{
+    flex: 0 1 57rem;
+    margin:2rem 3rem;
+    padding: 3rem;
+    position: relative;
+}
+
+.Reviews .conatiner-reviews .box .fa-quote-left{
+    position: absolute;
+    left: -7%;
+    font-size: 5rem;
+    color: #444;
+}
+
+.Reviews .conatiner-reviews .box .comments p{
+    font-size: 1.7rem;
+    line-height: 1.6;
+    padding-bottom: 1.5rem;
+}
+
+.Reviews .conatiner-reviews .box .comments .nomeEQualidade{
+    display: flex;
+    align-items: center;
+}
+
+.Reviews .conatiner-reviews .box .comments .nomeEQualidade span{
+    padding-right: 2rem;
+    font-size: 1.7rem;
+}
+
+.Reviews .conatiner-reviews .box .comments .nomeEQualidade .stars i{
+    font-size: 1.7rem;
+}
+
+/* rodape */
+
+.rodape{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+    gap: 3rem;
+    background: var(--cor-very-berry);
+}
+
+.rodape .box{
+    flex: 0 1 27rem;
+    color: var(--cor-white);
+    cursor: pointer;
+}
+
+.rodape .box h3{
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+
+.rodape .box span{
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.rodape .box address{
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+.rodape .box p{
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.rodape .box p i{
+    padding-right: .8rem;
+    
+}
+
+.rodape .box .imagens{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(6.5rem,1fr));
+    gap: 1rem;
+}
+
+.rodape .box .imagens img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1300px){
+    .container-rooms .box-rooms .luxury-room{
+        flex: 0 1 50rem;
+        height:30rem;
+    }
+}
+
+@media(max-width:1080px){
+    .container-rooms .box-rooms .luxury-room{
+        flex: 0 1 40rem;
+        height: 29rem;
+    }
+}
+
+@media(max-width:768px){
+    .container-rooms .box-rooms .luxury-room{
+        flex: 0 1 35rem;
+        height: 25rem;
+    }
+}
+
+@media(max-width:425px){
+    .container-rooms .box-rooms .luxury-room{
+        flex: 0 1 30rem;
+        height: 20rem;
+    }
+
+    .container-rooms .box-rooms .luxury-room .descricao-quarto .icone{
+        height: 6.5rem;
+        width: 5rem;
+        text-align: center;
+        line-height: 7rem;
+    }
+}
+
+
+
+
+
+

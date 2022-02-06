@@ -1,0 +1,15 @@
+:root{
+    --cor-very-berry:#B53471;
+    --cor-white:#fff;
+    --cor-gray:#f1f2f6;
+    --cor-gray-200:#999;
+}
+
+.heading{
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    font-size: 3.5rem;
+    color: #444;
+    font-weight: 500;
+}
