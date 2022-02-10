@@ -9,13 +9,11 @@
     <link rel="stylesheet" href="src/resete/resete.css">
     <link rel="stylesheet" href="src/global/global.css">
     <link rel="stylesheet" href="src/estilo/style.css">
-    <link rel="stylesheet" href="src/rooms/rooms.css">
-    <link rel="stylesheet" href="src/services/Services.css">
     <title>Hotes e Diversão</title>
 </head>
 
 <body>
-    <header class="container-box" id="home">
+    <header class="container-cabecalho">
         <section class="max-width">
             <div class="header">
                 <div class="box-icones">
@@ -27,16 +25,19 @@
 
                 <div class="navegation">
                     <a href="#" class="Logo">hoteliour</a>
-                    <div class="navbar">
+                    <nav class="navbar">
                         <ul>
+                            <div id="removebars" class="fas fa-times"></div>
                             <li><a href="#" data-menu class="ativo">home</a></li>
-                            <li><a href="#rooms" data-menu>rooms</a></li>
-                            <li><a href="#servicos" data-menu>reservation</a></li>
-                            <li><a href="#" data-menu>elements</a></li>
-                            <li><a href="#" data-menu>features</a></li>
-                            <li><a href="#" data-menu>blog</a></li>
-                            <li><a href="#" data-menu>contact</a></li>
+                            <li><a href="#" data-menu>rooms</a></li>
+                            <li><a href="#" data-menu>Services</a></li>
+                            <li><a href="#" data-menu>Special-Offers</a></li>
+                            <li><a href="#" data-menu>Reviews</a></li>
                         </ul>
+                    </nav>
+
+                    <div class="menuHambuguer">
+                        <div id="menu"></div>
                     </div>
                 </div>
             </div>
@@ -52,8 +53,8 @@
             <div class="box-rooms">
                 <div class="luxury-room">
                     <img src="src/image/quarto-1.jpg" alt="Quarto Luxury">
-                    <div class="descricao-quarto">
-                        <div class="texto">
+                    <div class="description-room">
+                        <div class="text">
                             <h3>Luxury Room</h3>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                         </div>
@@ -65,8 +66,8 @@
 
                 <div class="luxury-room">
                     <img src="src/image/quarto-2.jpg" alt="Quarto Modern">
-                    <div class="descricao-quarto">
-                        <div class="texto">
+                    <div class="description-room">
+                        <div class="text">
                             <h3>modern-residence</h3>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                         </div>
@@ -80,8 +81,8 @@
             <div class="box-rooms box">
                 <div class="morder-rooms">
                     <img src="src/image/quarto-3.jpg" alt="imagem Quarto Hotel">
-                    <div class="descricao-quarto">
-                        <div class="texto">
+                    <div class="description-room">
+                        <div class="text">
                             <h3>morder-rooms</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
@@ -93,8 +94,8 @@
 
                 <div class="morder-rooms">
                     <img src="src/image/quarto-4.jpg" alt="imagem Quarto Hotel">
-                    <div class="descricao-quarto">
-                        <div class="texto">
+                    <div class="description-room">
+                        <div class="text">
                             <h3>morder-rooms</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
@@ -106,8 +107,8 @@
 
                 <div class="morder-rooms">
                     <img src="src/image/quarto-05.jpg" alt="imagem Quarto Hotel">
-                    <div class="descricao-quarto">
-                        <div class="texto">
+                    <div class="description-room">
+                        <div class="text">
                             <h3>Lmorder-rooms</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
@@ -279,7 +280,9 @@
 
         <div class="box">
             <h3>About Us</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque corporis dolore explicabo distinctio. Omnis sit voluptas eveniet, eum itaque architecto vel. Eum aliquid quidem rerum soluta hic temporibus modi maiores!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque corporis dolore explicabo distinctio.
+                Omnis sit voluptas eveniet, eum itaque architecto vel. Eum aliquid quidem rerum soluta hic temporibus
+                modi maiores!</p>
         </div>
     </footer>
     <script src="index.js"></script>

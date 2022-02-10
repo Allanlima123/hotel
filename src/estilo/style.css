@@ -2,33 +2,37 @@
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
 
-.container-box{
+.container-cabecalho{
     background: var(--cor-gray);
 }
 
-.container-box .max-width{
+.container-cabecalho .max-width{
     background-image:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(../image/hotel-header.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 85vh;
+    min-height: 80vh;
 }
 
-.container-box .max-width .header{
+.container-cabecalho .max-width .header{
+    position: fixed;
+    left: 0;
+    right: 0;
     max-width: 144rem;
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     padding: 0 2%;
+    z-index: 99;
 }
 
-.container-box .max-width .header .box-icones{
+.container-cabecalho .max-width .header .box-icones{
     padding:0 2rem;
     padding-bottom: 1rem;
 }
 
-.container-box .max-width .header .box-icones i{
+.container-cabecalho .max-width .header .box-icones i{
     color: var(--cor-white);
     margin-top: 1.5rem;
     padding-right:1.5rem;
@@ -37,36 +41,20 @@
     transition: .3s ease-in-out;
 }
 
-.container-box .max-width .header .box-icones i:hover{
+.container-cabecalho .max-width .header .box-icones i:hover{
     color: var(--cor-very-berry);
 }
 
-.container-box .max-width .header .navegation{
+.container-cabecalho .max-width .header .navegation{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--cor-gray);
     padding: 2rem;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
-    position: relative;
-    overflow: hidden;
 }
 
-.container-box .max-width .header .navegation::after{
-    position: absolute;
-    content:"hotel";
-    color: #fff;
-    text-align: center;
-    height: 1.5rem;
-    width: 10rem;
-    background: var(--cor-very-berry);
-    transform: rotate(-50deg);
-    left: -4rem;
-    top: 1rem;
-    padding-left: .5rem;
-}
-
-.container-box .max-width .header .navegation .Logo{
+.container-cabecalho .max-width .header .navegation .Logo{
     text-transform: uppercase;
     color: var(--cor-gray-200);
     font-size: 2.2rem;
@@ -74,17 +62,20 @@
     font-weight: 400;
 }
 
-.container-box .max-width .header .navegation .navbar ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#removebars{
+    display: none;
 }
 
-.container-box .max-width .header .navegation .navbar ul li{
+.container-cabecalho .max-width .header .navegation .navbar ul{
+    display: flex;
+    position: relative;
+}
+
+.container-cabecalho .max-width .header .navegation .navbar ul li{
     margin-right:.5rem;
 }
 
-.container-box .max-width .header .navegation .navbar ul li a{
+.container-cabecalho .max-width .header .navegation .navbar ul li a{
     font-size: 1.8rem;
     cursor: pointer;
     padding: 1rem 1.5rem;
@@ -93,12 +84,55 @@
     transition: .2s ease-in-out;
 }
 
-.container-box .max-width .header .navegation .navbar ul li a.ativo{
+.container-cabecalho .max-width .header .navegation .navbar ul li a.ativo{
     background: var(--cor-very-berry);
     color: var(--cor-white);
 }
 
-.container-box .description{
+.menuHambuguer{
+    display: none;
+    width: 4.5rem;
+    height: 4.5rem;
+    position: relative;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.menuHambuguer #menu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--cor-very-berry);
+    height: .5rem;
+    width: 3.5rem;
+    border-radius: 3.2rem;
+    background: var(--cor-very-berry);
+}
+
+.menuHambuguer #menu::before{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 3.5rem;
+    height: .4rem;
+    background: var(--cor-very-berry);
+    top: -1.1rem;
+    border-radius: 3.2rem
+}
+
+.menuHambuguer #menu::after{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 3.5rem;
+    height: .5rem;
+    background: var(--cor-very-berry);
+    bottom: -1.1rem;
+    border-radius: 3.2rem
+} 
+
+.container-cabecalho .description{
     max-width: 144rem;
     margin: 0 auto;
     padding: 3.5rem 3%;
@@ -132,8 +166,8 @@
     object-fit: cover;
 }
 
-.container-rooms .box-rooms .luxury-room .descricao-quarto,
-.container-rooms .box-rooms .morder-rooms .descricao-quarto{
+.container-rooms .box-rooms .luxury-room .description-room,
+.container-rooms .box-rooms .morder-rooms .description-room{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -145,20 +179,20 @@
     padding: .5rem 1.5rem;
 }
 
-.container-rooms .box-rooms .luxury-room .descricao-quarto .texto h3,
-.container-rooms .box-rooms .morder-rooms .descricao-quarto .texto h3{
+.container-rooms .box-rooms .luxury-room .description-room .text h3,
+.container-rooms .box-rooms .morder-rooms .description-room .text h3{
     font-size: 1.5rem;
     color: #444;
 }
 
-.container-rooms .box-rooms .luxury-room .descricao-quarto .texto p,
-.container-rooms .box-rooms .morder-rooms .descricao-quarto .texto p{
+.container-rooms .box-rooms .luxury-room .description-room .text p,
+.container-rooms .box-rooms .morder-rooms .description-room .text p{
     font-size: 1.2rem;
     padding: .4rem 0;
 }
 
-.container-rooms .box-rooms .luxury-room .descricao-quarto .icone,
-.container-rooms .box-rooms .morder-rooms .descricao-quarto .icone{
+.container-rooms .box-rooms .luxury-room .description-room .icone,
+.container-rooms .box-rooms .morder-rooms .description-room .icone{
     background: var(--cor-very-berry);
     position: absolute;
     bottom: 0;
@@ -169,8 +203,8 @@
     line-height: 6.2rem;
 }
 
-.container-rooms .box-rooms .luxury-room .descricao-quarto .icone i,
-.container-rooms .box-rooms .morder-rooms .descricao-quarto .icone i{
+.container-rooms .box-rooms .luxury-room .description-room .icone i,
+.container-rooms .box-rooms .morder-rooms .description-room .icone i{
     color: #fff;
     font-size: 2rem;
 }
@@ -431,30 +465,82 @@
 
 @media(max-width:1300px){
     .container-rooms .box-rooms .luxury-room{
-        flex: 0 1 50rem;
+        flex: 0 1 52rem;
         height:30rem;
     }
 }
 
 @media(max-width:1080px){
     .container-rooms .box-rooms .luxury-room{
-        flex: 0 1 40rem;
+        flex: 1 1 40rem;
         height: 29rem;
+        margin: 2rem;
+    }
+
+    .container-rooms .box-rooms .morder-rooms{
+        flex: 1 1 42rem;
+        margin: 2rem;
+    }
+}
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
     }
 }
 
 @media(max-width:768px){
-    .container-rooms .box-rooms .luxury-room{
+
+    #removebars{
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        font-size: 4rem;
+        color: var(--cor-very-berry);
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .menuHambuguer{
+        display: block;
+    }
+
+    .container-cabecalho .max-width .header .navegation .navbar ul{
+        top: 4.5rem;
+        right: -110%;
+        position: absolute;
+        height: 40rem;
+        width: 30rem;
+        background-color: #fff;
+        display: block;
+        text-align: center;
+        transition: .4s linear;
+        box-shadow: -10px 10px 15px rgba(0,0,0,.3);
+        border-radius:.5rem;
+        z-index: 99;
+    }
+
+    .container-cabecalho .max-width .header .navegation .navbar.active ul{
+        padding: 2rem 0;
+        right: 1.1rem;
+    }
+
+    .container-cabecalho .max-width .header .navegation .navbar ul li{
+        margin: 3.5rem 0;
+    }
+    
+    .container-cabecalho .max-width .header .navegation .navbar ul li a{
+        font-size: 2.5rem;
+    }
+
+    /* .container-rooms .box-rooms .luxury-room{
         flex: 0 1 35rem;
         height: 25rem;
-    }
+    } */
 }
 
 @media(max-width:425px){
-    .container-rooms .box-rooms .luxury-room{
-        flex: 0 1 30rem;
-        height: 20rem;
-    }
 
     .container-rooms .box-rooms .luxury-room .descricao-quarto .icone{
         height: 6.5rem;
