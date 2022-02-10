@@ -235,13 +235,13 @@
     margin: 0 auto;
 }
 
-.Services .box-Services .atracoes{
-    flex: 1 1 25rem;
+.Services .box-Services .attractions{
+    flex: 0 1 25rem;
     margin: 2rem;
     padding: 2rem;
 }
 
-.Services .box-Services .atracoes .image{
+.Services .box-Services .attractions .image{
     width: 10rem;
     height: 10rem;
     object-fit: cover;
@@ -251,32 +251,32 @@
     opacity: 80%;
 }
 
-.Services .box-Services .atracoes .image img{
+.Services .box-Services .attractions .image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.Services .box-Services .atracoes h3{
+.Services .box-Services .attractions h3{
     padding-top: 1.2rem;
     font-size: 1.7rem;
     color: #222;
 }
 
-.Services .box-Services .atracoes p{
+.Services .box-Services .attractions p{
     padding: 1.4rem;
     font-size: 1.3rem;
     color: #444;
     line-height: 1.5;
 }
 
-.Services .box-Services .atracoes .btn{
+.Services .box-Services .attractions .btn{
     color: var(--cor-very-berry);
     font-size: 2rem;
     cursor: pointer;
 }
 
-.Services .box-Services .atracoes .btn::after{
+.Services .box-Services .attractions .btn::after{
     content: "";
     display: block;
     width: 10rem;
@@ -296,16 +296,13 @@
 }
 
 .special-offers .container-offers{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(38rem,1fr));
     gap: 3rem;
 }
 
 .special-offers .container-offers .offers{
     background-color: #fff;
-    flex: 1 1 40rem;
     padding: 1.5rem;
     border-radius: .5rem;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
@@ -533,11 +530,6 @@
     .container-cabecalho .max-width .header .navegation .navbar ul li a{
         font-size: 2.5rem;
     }
-
-    /* .container-rooms .box-rooms .luxury-room{
-        flex: 0 1 35rem;
-        height: 25rem;
-    } */
 }
 
 @media(max-width:425px){
