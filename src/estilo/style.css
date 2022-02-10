@@ -39,6 +39,7 @@
     font-size: 2rem;
     cursor: pointer;
     transition: .3s ease-in-out;
+    text-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
 }
 
 .container-cabecalho .max-width .header .box-icones i:hover{
@@ -297,7 +298,7 @@
 
 .special-offers .container-offers{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(38rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
     gap: 3rem;
 }
 
@@ -487,7 +488,6 @@
 }
 
 @media(max-width:768px){
-
     #removebars{
         display: block;
         position: absolute;
@@ -529,6 +529,14 @@
     
     .container-cabecalho .max-width .header .navegation .navbar ul li a{
         font-size: 2.5rem;
+    }
+
+    .Reviews .conatiner-reviews .box .fa-quote-left{
+        position: absolute;
+        left: 7%;
+        top: 1rem;
+        font-size: 10rem;
+        z-index: -10;
     }
 }
 
