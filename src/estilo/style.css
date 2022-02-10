@@ -431,36 +431,6 @@
     object-fit: cover;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media(max-width:1300px){
     .container-rooms .box-rooms .luxury-room{
         flex: 0 1 52rem;
@@ -488,6 +458,10 @@
 }
 
 @media(max-width:768px){
+    html{
+        font-size: 50%;
+    }
+
     #removebars{
         display: block;
         position: absolute;
@@ -541,7 +515,6 @@
 }
 
 @media(max-width:425px){
-
     .container-rooms .box-rooms .luxury-room .descricao-quarto .icone{
         height: 6.5rem;
         width: 5rem;
