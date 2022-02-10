@@ -507,9 +507,8 @@
 
     .Reviews .conatiner-reviews .box .fa-quote-left{
         position: absolute;
-        left: 7%;
-        top: 1rem;
-        font-size: 10rem;
+        left: 3%;
+        top: 2rem;
         z-index: -10;
     }
 }
