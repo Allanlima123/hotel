@@ -1,5 +1,4 @@
 let menuAtivo = document.querySelectorAll("[data-menu]");
-
 //Menu
 let menuHambuguer = document.querySelector(".menuHambuguer");
 let removeNavBar =  document.getElementById("removebars")
@@ -13,7 +12,7 @@ removeNavBar.addEventListener("click", () =>{
     navMenu.classList.remove("active");
 });
 
-menuAtivo.forEach((menu)=>{
+menuAtivo.forEach(menu =>{
     menu.addEventListener("click",function(){
         for(i = 0; i < menuAtivo.length; i++){
             menuAtivo[i].classList.remove("ativo");
